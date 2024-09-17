@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <section>
+        <nav class="flex justify-evenly items-center max-md:justify-center max-md:relative max-md:overflow-hidden">
+        <div class="my-3">
+            <img src="assets/img/jomon/home1/icon-logo.jpg" class="w-[90px] max-md:w-[120px]" alt="Logo">
+        </div>
+        <div class="flex gap-5 mt-3 max-md:hidden">
+            <a href="#" class="text-[#1A377C] text-[13px] border-t-[1px] border-[#1A377C] px-2 pt-2 hover:border-t-4 hover:pt-[5px]">ホーム</a>
+            <a href="#" class="text-[#1A377C] text-[13px] border-t-[1px] border-[#1A377C] px-2 pt-2 hover:border-t-4 hover:pt-[5px]">構造</a>
+            <a href="#" class="text-[#1A377C] text-[13px] border-t-[1px] border-[#1A377C] px-2 pt-2 hover:border-t-4 hover:pt-[5px]">代表者について</a>
+            <a href="#" class="text-[13px] border-t-4 border-[#1A377C] px-2 pt-[5px]">これまでの歩み</a>
+            <a href="#" class="text-[#1A377C] text-[13px] border-t-[1px] border-[#1A377C] px-2 pt-2 hover:border-t-4 hover:pt-[5px]">お問い合わせ</a>
+        </div>
+        <div class="max-md:flex hidden justify-end">
+            <div id="resNav" @click="toggleMenu" class="absolute top-10 right-10">
+            <img id="resBtn" class="w-[35px]" src="assets/img/jomon/home1/bars-icon.jpg" alt="Menu Button">
+            </div>
+            <div v-bind:class="{'hidden': !menuVisible, 'block': menuVisible}" id="resMenu" class="fixed top-0 left-0 w-full h-[664px] p-10 bg-white text-black resGoDown z-50">
+            <div id="resNavClose" @click="closeMenu" class="absolute top-10 right-10 rounded-md text-black">
+                <img class="w-[35px]" src="assets/img/jomon/home1/close-icon.jpg" alt="Close Button">
+            </div>
+            <div class="block"></div>
+            <div class="flex flex-col mb-8">
+                <a href="#" class="text-[25px] text-center mt-10">ホーム</a>
+                <a href="#" class="text-[25px] text-center mt-10">構造</a>
+                <a href="#" class="text-[25px] text-center mt-10">代表者について</a>
+                <a href="#" class="text-[25px] text-center mt-10">これまでの歩み</a>
+                <a href="#" class="text-[25px] text-center mt-10">お問い合わせ</a>
+            </div>
+            </div>
+        </div>
+        </nav>
+  </section>
+
+    <section>
+        <div class="relative overflow-hidden flex items-center justify-center h-fit w-full">
+            <img class="w-full object-cover object-top -z-10 max-md:inset-auto" src="assets/img/jomon/page4/bg-story.jpg" alt="">
+            <div class="absolute z-20 text-center">
+                <h1 class="text-white text-[66px] max-md:text-[19px]">STORY</h1>
+            </div>
+        </div>
+    </section>
+    
+    <section class="max-w-[980px] mx-auto mt-12 max-md:mx-6">
+        <div class="mx-32 max-md:mx-10">
+            <div>
+                <h1 class="font-semibold text-[25px] text-center text-[#33343F]">STORY</h1>
+            </div>
+            <hr class="w-[72px] border-solid border-black mx-auto mb-1">
+            <div>
+                <p class="text-[12px] text-center font-thin text-[#3344F]">これまでの歩み</p>
+            </div>
+        </div>
+        <div class="mx-24 max-md:mx-6">
+            <div class="my-10">
+                <p class="mt-10 mb-5 mx-auto text-start">私は、起業する前に一条工務店（高気密高断熱住宅では最先端のハウスメーカー）に勤務していたのですが、古民家にも関心があり縄文時代の竪穴式住居が地球に優しい環境を壊さない家だなと考えていました。しかし、起業するとなったときに現代に竪穴式住居に住むのは無理だと思い、高気密高断熱住宅「Tiera（＊）」を開発・販売してきました。太陽光発電システムを乗せるとZEH(ネット・ゼロ・エネルギー・ハウス)の家となります。政府の方針で2030年にはZEHでないと家を建てられなくなります。義務化されるからです。<br>＊「Tiera（ティエラ）」＝UA値0.5　C値0.35(平均値)　耐震等級3</p>
+                <p class="mb-5">2022年ころから現代版竪穴式住居の構想を徐々に固め、2024年2月に【竪穴式住宅家屋の構造】として実用新案登録（登録第3246226号）し、現在に至ります。</p>
+                <p class="text-red-500">現時点において、縄文建設の竪穴式住居は構想の段階であり、施工事例はありません。構造図は特許取得のために描いた図面ですので、ご興味のあるお客様と一緒に具体的な図面を描き、施工していきたいと考えています。</p>
+            </div>
+            <div class="flex mt-6 max-lg:ml-0 justify-between flex-wrap max-md:justify-center max-md:gap-5">
+                <a href="" class="flex items-center py-[3px] px-5 rounded-3xl bg-[#1A377C] text-white tracking-[3px] hover:bg-[#3F7652] duration-300 max-md:justify-center max-md:w-[210px]">
+                    <span>ZEHとは</span>
+                    <span class="w-[37px] h-[37px] fill-white">
+                        <svg class="" data-bbox="9 70.9 181 59" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                            <g>
+                                <path d="M159 70.9l-2.2 2.4L183.6 99H9v3h174.6l-26.2 25.3 2.1 2.6 30.5-29.3-31-29.7z"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </a>
+                <a href="" class="flex items-center py-[3px] px-5 rounded-3xl bg-[#1A377C] text-white tracking-[3px] hover:bg-[#3F7652] duration-300 max-md:justify-center max-md:w-[210px]">
+                    <span>構造図を見る</span>
+                    <span class="w-[37px] h-[37px] fill-white">
+                        <svg class="" data-bbox="9 70.9 181 59" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                            <g>
+                                <path d="M159 70.9l-2.2 2.4L183.6 99H9v3h174.6l-26.2 25.3 2.1 2.6 30.5-29.3-31-29.7z"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </a>
+                <a href="" class="flex items-center py-[3px] px-5 rounded-3xl bg-[#1A377C] text-white tracking-[3px] hover:bg-[#3F7652] duration-300 max-md:justify-center max-md:w-[210px]">
+                    <span>実用新案登録証</span>
+                    <span class="w-[37px] h-[37px] fill-white">
+                        <svg class="" data-bbox="9 70.9 181 59" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                            <g>
+                                <path d="M159 70.9l-2.2 2.4L183.6 99H9v3h174.6l-26.2 25.3 2.1 2.6 30.5-29.3-31-29.7z"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-[980px] mx-auto mt-48 max-md:mt-20 max-md:mx-6">
+        <div class="mx-32 max-md:mx-10">
+            <div>
+                <h1 class="font-semibold text-[25px] text-center text-[#33343F]">PERFORMANCE</h1>
+            </div>
+            <hr class="w-[72px] border-solid border-black mx-auto mb-1">
+            <div>
+                <p class="text-[12px] text-center font-thin text-[#3344F]"><span class="font-semibold">Tiera</span>施工実績</p>
+            </div>
+        </div>
+        <div class="my-16">
+            <video id="comp-luw2shyl_video" class="K8MSra" crossorigin="anonymous" aria-label="ZEH" playsinline="" preload="auto" muted="" loop="" tabindex="-1" autoplay="" src="https://video.wixstatic.com/video/7b4e86_4f84b0e703eb424bb8c4b3ad388156dd/720p/mp4/file.mp4" style="height: 100%; width: 100%; object-fit: cover; object-position: center center; opacity: 1;"></video>
+        </div>
+    </section>
+
+    <footer class="bg-[#F3F5F8] py-7">
+        <div class="max-w-[980px] mx-auto flex justify-center items-center gap-32 max-md:flex-col max-md:gap-5">
+            <div>
+                <img src="assets/img/jomon/home1/icon-logo.jpg" width="96px" alt="">
+            </div>
+            <div class="flex">
+                <svg class="w-[35px] h-[21px] fill-[#1A377C]" preserveAspectRatio="none" data-bbox="53.5 64.6 93.4 62.1" viewBox="53.5 64.6 93.4 62.1" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
+                    <g>
+                        <path d="M56.7 126.7h87c1.8 0 3.2-1.5 3.2-3.2V67.8c0-1.8-1.5-3.2-3.2-3.2h-87c-1.8 0-3.2 1.5-3.2 3.2v55.7c0 1.7 1.4 3.2 3.2 3.2zm3.3-6.5V73.6l38.3 22.9c.5.3 1.1.5 1.7.5s1.2-.2 1.7-.5l38.9-23.3v47H60zM68.3 71h63.1L99.9 89.9 68.3 71z"></path>
+                    </g>
+                </svg>
+                <p class="text-[15px] font-light ml-2">jomon.kensetsu@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation Responsive
+        // Navigation Responsive
+        // Navigation Responsive
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            const respoNav = document.getElementById('resNav');
+            const respoMenu = document.getElementById('resMenu');
+            const respoNavClose = document.getElementById('resNavClose');
+        
+            respoNav.addEventListener('click', function() {
+                if (respoMenu.classList.contains('hidden')) {
+                    respoMenu.classList.remove('hidden');
+                    respoMenu.classList.add('block');
+                } else {
+                    respoMenu.classList.add('hidden');
+                    respoMenu.classList.remove('block');
+                }
+            });
+        
+            respoNavClose.addEventListener('click', function() {
+                respoMenu.classList.add('nav-close');
+                setTimeout(() => {
+                    respoMenu.classList.add('hidden');
+                    respoMenu.classList.remove('block', 'nav-close');
+                }, 650);
+            });
+        });
+        
+        // Navigation Responsive
+        // Navigation Responsive
+        // Navigation Responsive
+    </script>
+    
+</body>
+</html>
